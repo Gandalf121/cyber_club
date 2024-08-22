@@ -1,0 +1,121 @@
+.login__form {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    top: 45%;
+    position: relative;
+    z-index: 5;
+    border-radius: 30px;
+    background: linear-gradient(180deg, #161c50 0%, #4463a6 100%);
+    padding: 50px 34px;
+    min-width: 504px;
+    max-width: 504px;
+}
+
+.login__field {
+    position: relative;
+    width: 100%;
+}
+
+.login__field input {
+    border-radius: 10px;
+    border: 1px solid #fff;
+    height: 89px;
+    width: 100%;
+    padding: 0px 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background: transparent;
+    outline: none;
+    color: #fff;
+    transition: 0.2s linear;
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 135%;
+    padding-top: 40px;
+    padding-bottom: 16px;
+}
+
+.login__field label {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 135%;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    transition: 0.2s linear;
+}
+
+.login__field:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+.login__button {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #5676b3;
+    height: 89px;
+    color: #fff;
+    font-family: Conthrax;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    text-align: center;
+    border: none;
+    outline: none;
+    width: 100%;
+    cursor: pointer;
+    margin: 10px 0px 35px 0px;
+    transition: 0.2s linear;
+}
+
+.login__content {
+    width: 50%;
+}
+.login__wrapper {
+    padding: clamp(30px, 5vw, 60px) 0px;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.login {
+    padding-top: var(--header-height);
+    background-image: url("../../img/login.png");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+
+[class*="__container"] {
+    max-width: 1190px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.login__wrapper {
+    padding: clamp(30px, 5vw, 60px) 0px;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.newUser{
+
+}
+
+.newUser:hover{
+    color: #c4b9b9;
+    cursor: pointer;
+}

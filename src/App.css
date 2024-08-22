@@ -1,9 +1,37 @@
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/*  max-width: 1280px;*/
+/*  margin: 0 auto;*/
+/*  padding: 2rem;*/
   text-align: center;
+  height: 100vh;
 }
+.main__wrapper {
+  position: relative;
+}
+.main__wrapper {
+  padding-top: 118px;
+  padding-bottom: 80px;
+  width: 100vw;
+  height: 100vh;
+  width: 100svw;
+  height: 100svh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@font-face {
+  font-family: "conthrax-sb";
+  src: url("./fonts/conthrax-sb.ttf");
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat-Regular.ttf");
+}
+.main__wrapper{
+  background-image: url(./img/Главная.png);
+}
+
 
 .logo {
   height: 6em;
@@ -39,4 +67,78 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.news {
+  background: url("./img/promo-bg.png");
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-size: auto;
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 100px;
+  height: inherit;
+  overflow: auto
+}
+[class*="__container"] {
+  max-width: 1190px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.news__container {
+  padding: clamp(40px, 4vw, 140px) 15px clamp(40px, 7vw, 100px) !important;
+}
+.news__image {
+  max-width: 100%;
+  width: 100%;
+  margin-bottom: 15px;
+  position: relative;
+}
+.news__image span {
+  position: absolute;
+  right: 0;
+  bottom: 40px;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: 30px 0px 0px 30px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(2px);
+  padding: 3px 13px;
+}
+.news__item {
+  width: calc(25% - 18px);
+}
+.news__items {
+  display: flex;
+  align-items: flex-start;
+  gap: 50px 23px;
+  flex-wrap: wrap;
+  padding-top: 3rem;
+}
+.news__info h2 {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 10px;
+}
+.news__info p {
+  color: #fff;
+  max-height: 60px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  font-family: Montserrat;
 }

@@ -1,5 +1,15 @@
+import {AuthorizationForm} from "../components/authorizationForm/AuthorizationForm.tsx";
+
 export function LoginPage() {
     return (
-        <h1>Test</h1>
+        <section className="login">
+            <div className="login__container">
+                <div className="login__wrapper">
+                    <div className="login__content">
+                        <AuthorizationForm/>
+                    </div>
+                </div>
+            </div>
+        </section>
     );
 }

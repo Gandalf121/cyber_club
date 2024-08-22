@@ -1,27 +1,29 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import NotFoundPage from "../pages/NotFoundPage.tsx";
-import UnauthRoute from "./UnauthRoute.tsx";
-import {LoginPage} from "../pages/LoginPage.tsx";
-import {MainPage} from "../pages/MainPage.tsx";
-import AuthProtectedRoute from "./AuthProtectedRoute.tsx";
-import {Header} from "../components/Header/Header.tsx";
+import {LoginPage} from "../pages/LoginPage";
+import {MainPage} from "../pages/MainPage";
+import AuthProtectedRoute from "./AuthProtectedRoute";
+import MainLayout from "../layouts/MainLayout.tsx";
+import {News} from "../pages/News.tsx";
+import {PersonalAccount} from "../pages/PersonalAccount.tsx";
+import {Info} from "../pages/Info.tsx";
+import {NewsItem} from "../components/newsItem/NewsItem.tsx";
 
 
 export function MainRouting() {
     return (
-       <BrowserRouter>
-           <Routes>
-               <Route
-                   path="/"
-                   element={
-                       <AuthProtectedRoute><Header/></AuthProtectedRoute>}>
-                   <Route path="main">
-                       <Route index  element={<MainPage/>}/>
-                   </Route>
-               </Route>
-               <Route path="/login" element={<UnauthRoute><LoginPage/></UnauthRoute>}></Route>
-               <Route path="*" element={<NotFoundPage/>}></Route>
-           </Routes>
-       </BrowserRouter>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<MainLayout/>}>
+                    <Route index  element={<MainPage/>}/>
+                    <Route path="login" element={<LoginPage/>}/>
+                    <Route path="news" element={<News/>}/>
+                    <Route path="news/:id" element={<NewsItem/>}/>
+                    <Route path="info" element={<Info/>}/>
+                    <Route path="personalAccount" element={<AuthProtectedRoute><PersonalAccount/></AuthProtectedRoute>}/>
+                </Route>
+                <Route path="*" element={<NotFoundPage/>}></Route>
+            </Routes>
+        </BrowserRouter>
     );
 }
